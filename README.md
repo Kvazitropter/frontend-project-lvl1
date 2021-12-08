@@ -4,3 +4,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://github.com/Kvazitropter/frontend-project-lvl1/tree/main/.github/workflows/node.js.yml)
 ### Brain-even game check:
 [![asciicast](https://asciinema.org/a/WNVesbxq1i5e0MDZSwebGyvMC.svg)](https://asciinema.org/a/WNVesbxq1i5e0MDZSwebGyvMC)
+### Brain-calc game check:
+[![asciicast](https://asciinema.org/a/X1f18w8zL2frpnZg2U0gbJqc1.svg)](https://asciinema.org/a/X1f18w8zL2frpnZg2U0gbJqc1)
