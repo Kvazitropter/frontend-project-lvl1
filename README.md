@@ -8,3 +8,5 @@
 [![asciicast](https://asciinema.org/a/X1f18w8zL2frpnZg2U0gbJqc1.svg)](https://asciinema.org/a/X1f18w8zL2frpnZg2U0gbJqc1)
 ### Brain-gcd game check:
 [![asciicast](https://asciinema.org/a/2OzE3gmk6NhLbWAsvAUkXSDXs.svg)](https://asciinema.org/a/2OzE3gmk6NhLbWAsvAUkXSDXs)
+### Brain-progression game check:
+[![asciicast](https://asciinema.org/a/y16y0NQzcZKHIrqVYC43tpogo.svg)](https://asciinema.org/a/y16y0NQzcZKHIrqVYC43tpogo)
