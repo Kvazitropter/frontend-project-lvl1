@@ -1,4 +1,4 @@
-import anyGame from './index.js';
+import anyGame from '../index.js';
 
 export default () => {
   const rules = 'What is the result of the expression?';

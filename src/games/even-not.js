@@ -1,4 +1,4 @@
-import anyGame from './index.js';
+import anyGame from '../index.js';
 
 export default () => {
   const rules = 'Answer "yes" if the number is even, otherwise answer "no".';

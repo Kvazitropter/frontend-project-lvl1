@@ -1,4 +1,4 @@
-import anyGame from './index.js';
+import anyGame from '../index.js';
 
 export const findBiggestCommDiv = (num1, num2) => {
   const arrayDiv1 = [];
