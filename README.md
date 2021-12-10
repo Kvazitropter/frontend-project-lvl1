@@ -9,4 +9,6 @@
 ### Brain-gcd game check:
 [![asciicast](https://asciinema.org/a/2OzE3gmk6NhLbWAsvAUkXSDXs.svg)](https://asciinema.org/a/2OzE3gmk6NhLbWAsvAUkXSDXs)
 ### Brain-progression game check:
-[![asciicast](https://asciinema.org/a/y16y0NQzcZKHIrqVYC43tpogo.svg)](https://asciinema.org/a/y16y0NQzcZKHIrqVYC43tpogo)
+[![asciicast](https://asciinema.org/a/y16y0NQzcZKHIrqVYC43tpogo.svg)](https://asciinema.org/a/y16y0NQzcZKHIrqVYC43tpogo0)
+### Brain-prime game check:
+[![asciicast](https://asciinema.org/a/ZkmWJnT3ntVNF5UoxLlQPDqS6.svg)](https://asciinema.org/a/ZkmWJnT3ntVNF5UoxLlQPDqS6)
