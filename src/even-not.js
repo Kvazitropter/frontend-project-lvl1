@@ -1,13 +1,13 @@
-import { anyGame } from './index.js';
+import anyGame from './index.js';
 
-export const evenOrNotGame = () => {
+export default () => {
   const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
   const numbers = [];
   const answers = [];
   let workNum = 0;
 
   while (workNum < 3) {
-    let num = Math.ceil(Math.random() * 1000);
+    const num = Math.ceil(Math.random() * 1000);
     numbers.push(num);
     if (num % 2 === 0) {
       answers.push('yes');

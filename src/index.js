@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export const anyGame = (rules, questions, rightAnswers) => {
+const anyGame = (rules, questions, rightAnswers) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ').trim();
   console.log(`Hello, ${name}!`);
@@ -21,9 +21,9 @@ export const anyGame = (rules, questions, rightAnswers) => {
       break;
     }
   }
-  
+
   if (workNum === 3) {
     console.log(`Congratulations, ${name}!`);
   }
 };
-
+export default anyGame;

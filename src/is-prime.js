@@ -1,4 +1,4 @@
-import { anyGame } from './index.js';
+import anyGame from './index.js';
 
 export const findDivisors = (num) => {
   const arrayDiv = [];
@@ -6,13 +6,13 @@ export const findDivisors = (num) => {
 
   while (div >= 1) {
     if (num % div === 0) {
-      arrayDiv.push(div)
-    } 
+      arrayDiv.push(div);
+    }
     div -= 1;
   }
 
   return arrayDiv;
-}
+};
 
 export const isPrimeGame = () => {
   const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -21,9 +21,9 @@ export const isPrimeGame = () => {
   let workNum = 0;
 
   while (workNum < 3) {
-    let num = Math.ceil(Math.random() * 100);
+    const num = Math.ceil(Math.random() * 100);
     numbers.push(num);
-    let divCount = findDivisors(num).length;
+    const divCount = findDivisors(num).length;
     if (divCount === 2) {
       answers.push('yes');
     } else {
@@ -34,4 +34,3 @@ export const isPrimeGame = () => {
 
   anyGame(rules, numbers, answers);
 };
-

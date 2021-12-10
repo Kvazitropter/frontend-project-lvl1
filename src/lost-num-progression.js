@@ -1,6 +1,6 @@
-import { anyGame } from './index.js';
+import anyGame from './index.js';
 
-export const findLostNumOfProgression = () => {
+const findLostNumOfProgression = () => {
   const rules = 'What number is missing in the progression?';
   const answers = [];
   const progressions = [];
@@ -19,9 +19,9 @@ export const findLostNumOfProgression = () => {
       anyNum += anyDiff;
       progression.push(String(anyNum));
     }
-    let any = Math.floor(Math.random() * progression.length);
-    answers.push(progression[any]);
-    progression[any] = gap;
+    const lostNum = Math.floor(Math.random() * progression.length);
+    answers.push(progression[lostNum]);
+    progression[lostNum] = gap;
     progressions.push(progression.join(' '));
     progression = [];
     workNum += 1;
@@ -29,4 +29,4 @@ export const findLostNumOfProgression = () => {
 
   anyGame(rules, progressions, answers);
 };
-
+export default findLostNumOfProgression;

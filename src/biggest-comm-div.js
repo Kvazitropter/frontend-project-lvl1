@@ -1,4 +1,4 @@
-import { anyGame } from './index.js';
+import anyGame from './index.js';
 
 export const findBiggestCommDiv = (num1, num2) => {
   const arrayDiv1 = [];
@@ -9,11 +9,11 @@ export const findBiggestCommDiv = (num1, num2) => {
 
   while (div1 >= 1 || div2 >= 1) {
     if (num1 % div1 === 0) {
-      arrayDiv1.push(div1)
+      arrayDiv1.push(div1);
     }
     if (num2 % div2 === 0) {
-      arrayDiv2.push(div2)
-    } 
+      arrayDiv2.push(div2);
+    }
     div1 -= 1;
     div2 -= 1;
   }
@@ -35,8 +35,8 @@ export const biggestCommDivGame = () => {
   let workNum = 0;
 
   while (workNum < 3) {
-    let num1 = Math.ceil(Math.random() * 100);
-    let num2 = Math.ceil(Math.random() * 100);
+    const num1 = Math.ceil(Math.random() * 100);
+    const num2 = Math.ceil(Math.random() * 100);
     pairsOfNum.push(`${num1} ${num2}`);
     biggestCommDiv.push(String(findBiggestCommDiv(num1, num2)));
     workNum += 1;
@@ -44,4 +44,3 @@ export const biggestCommDivGame = () => {
 
   anyGame(rules, pairsOfNum, biggestCommDiv);
 };
-

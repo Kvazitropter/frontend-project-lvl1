@@ -1,6 +1,6 @@
-import { anyGame } from './index.js';
+import anyGame from './index.js';
 
-export const calculateGame = () => {
+export default () => {
   const rules = 'What is the result of the expression?';
   const expressions = [];
   const values = [];
@@ -13,7 +13,7 @@ export const calculateGame = () => {
   while (workNum < 3) {
     firstNum = Math.ceil(Math.random() * 100);
     secondNum = Math.ceil(Math.random() * 100);
-    let operator = operators[Math.floor(Math.random() * operators.length)];
+    const operator = operators[Math.floor(Math.random() * operators.length)];
     if (operator === '+') {
       values.push(String(firstNum + secondNum));
     } else if (operator === '-') {
@@ -28,4 +28,3 @@ export const calculateGame = () => {
 
   anyGame(rules, expressions, values);
 };
-
