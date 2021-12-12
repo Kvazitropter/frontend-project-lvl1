@@ -1,18 +1,40 @@
-### Decription of project:
 In this project are realized five small mathematic games named brain games.
 ---------------------------------------------------------------------------
+Requirements:
+
+node v17.2.0
+npm 8.1.4
+
+---------------------------------------------------------------------------
+Setup:
+
+1. npm install @hexlet/code
+2. make install
+
+---------------------------------------------------------------------------
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Kvazitropter/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Kvazitropter/frontend-project-lvl1/actions)
+
 ### Project build status:
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://github.com/Kvazitropter/frontend-project-lvl1/tree/main/.github/workflows/node.js.yml)
+
 ---------------------------------------------------------------------------
-### Brain-even game check:
+
+### Greeting:
+[![asciicast](https://asciinema.org/a/sAk7NXEynGwLvUcnzMnCn6bfU.svg)](https://asciinema.org/a/sAk7NXEynGwLvUcnzMnCn6bfU)
+
+### Brain-even game:
 [![asciicast](https://asciinema.org/a/WNVesbxq1i5e0MDZSwebGyvMC.svg)](https://asciinema.org/a/WNVesbxq1i5e0MDZSwebGyvMC)
-### Brain-calc game check:
+
+### Brain-calc game:
 [![asciicast](https://asciinema.org/a/X1f18w8zL2frpnZg2U0gbJqc1.svg)](https://asciinema.org/a/X1f18w8zL2frpnZg2U0gbJqc1)
-### Brain-gcd game check:
+
+### Brain-gcd game:
 [![asciicast](https://asciinema.org/a/2OzE3gmk6NhLbWAsvAUkXSDXs.svg)](https://asciinema.org/a/2OzE3gmk6NhLbWAsvAUkXSDXs)
-### Brain-progression game check:
+
+### Brain-progression game:
 [![asciicast](https://asciinema.org/a/y16y0NQzcZKHIrqVYC43tpogo.svg)](https://asciinema.org/a/y16y0NQzcZKHIrqVYC43tpogo0)
-### Brain-prime game check:
+
+### Brain-prime game:
 [![asciicast](https://asciinema.org/a/ZkmWJnT3ntVNF5UoxLlQPDqS6.svg)](https://asciinema.org/a/ZkmWJnT3ntVNF5UoxLlQPDqS6)
