@@ -1,19 +1,20 @@
 import anyGame from '../index.js';
+import { roundsCount } from '../index.js';
+import generateRandNum from '../helpers/random-num.js';
 
 export default () => {
   const rules = 'What is the result of the expression?';
   const expressions = [];
   const values = [];
-  let workNum = 0;
   const operators = ['+', '-', '*'];
   let firstNum = 0;
   let secondNum = 0;
   let expression = '';
 
-  while (workNum < 3) {
-    firstNum = Math.ceil(Math.random() * 100);
-    secondNum = Math.ceil(Math.random() * 100);
-    const operator = operators[Math.floor(Math.random() * operators.length)];
+  for (let i = 0; i < roundsCount; i += 1) {
+    firstNum = generateRandNum(1, 100);
+    secondNum = generateRandNum(1, 100);
+    const operator = operators[generateRandNum(0, operators.length - 1)];
     if (operator === '+') {
       values.push(String(firstNum + secondNum));
     } else if (operator === '-') {
@@ -23,7 +24,6 @@ export default () => {
     }
     expression = `${firstNum} ${operator} ${secondNum}`;
     expressions.push(String(expression));
-    workNum += 1;
   }
 
   anyGame(rules, expressions, values);

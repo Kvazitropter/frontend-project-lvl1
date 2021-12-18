@@ -1,27 +1,15 @@
 import anyGame from '../index.js';
+import { roundsCount } from '../index.js';
+import generateRandNum from '../helpers/random-num.js';
+import findDivisors from '../helpers/array-of-divisors.js';
 
-export const findDivisors = (num) => {
-  const arrayDiv = [];
-  let div = num;
-
-  while (div >= 1) {
-    if (num % div === 0) {
-      arrayDiv.push(div);
-    }
-    div -= 1;
-  }
-
-  return arrayDiv;
-};
-
-export const isPrimeGame = () => {
+export default () => {
   const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const numbers = [];
   const answers = [];
-  let workNum = 0;
 
-  while (workNum < 3) {
-    const num = Math.ceil(Math.random() * 100);
+  for (let i = 0; i < roundsCount; i += 1) {
+    const num = generateRandNum(1, 1000);
     numbers.push(num);
     const divCount = findDivisors(num).length;
     if (divCount === 2) {
@@ -29,7 +17,6 @@ export const isPrimeGame = () => {
     } else {
       answers.push('no');
     }
-    workNum += 1;
   }
 
   anyGame(rules, numbers, answers);

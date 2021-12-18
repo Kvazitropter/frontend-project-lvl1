@@ -1,4 +1,6 @@
 import anyGame from '../index.js';
+import { roundsCount } from '../index.js';
+import generateRandNum from '../helpers/random-num.js';
 
 const findLostNumOfProgression = () => {
   const rules = 'What number is missing in the progression?';
@@ -8,25 +10,23 @@ const findLostNumOfProgression = () => {
   const minCount = 5;
   const maxCount = 10;
   let progression = [];
-  let workNum = 0;
   let count = 0;
   let anyNum = 0;
   let anyDiff = 0;
 
-  while (workNum < 3) {
-    count = Math.floor(Math.random() * (maxCount - minCount)) + minCount;
-    anyNum = Math.ceil(Math.random() * 100);
-    anyDiff = Math.ceil(Math.random() * 100);
-    for (let i = 0; i < count; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
+    count = generateRandNum(minCount, maxCount);
+    anyNum = generateRandNum(1, 100);
+    anyDiff = generateRandNum(1, 100);
+    for (let u = 0; u < count; u += 1) {
       anyNum += anyDiff;
       progression.push(String(anyNum));
     }
-    const lostNum = Math.floor(Math.random() * progression.length);
+    const lostNum = generateRandNum(0, progression.length - 1);
     answers.push(progression[lostNum]);
     progression[lostNum] = gap;
     progressions.push(progression.join(' '));
     progression = [];
-    workNum += 1;
   }
 
   anyGame(rules, progressions, answers);
