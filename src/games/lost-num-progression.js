@@ -1,5 +1,4 @@
-import anyGame from '../index.js';
-import { roundsCount } from '../index.js';
+import anyGame, { roundsCount } from '../index.js';
 import generateRandNum from '../helpers/random-num.js';
 
 const findLostNumOfProgression = () => {

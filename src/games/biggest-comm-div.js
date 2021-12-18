@@ -1,6 +1,4 @@
-import anyGame from '../index.js';
-import { roundsCount } from '../index.js';
-import generateRandNum from '../helpers/random-num.js';
+import anyGame, { roundsCount } from '../index.js';
 import findBiggestCommDiv from '../helpers/find-biggest-comm-div.js';
 
 export default () => {
