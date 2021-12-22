@@ -3,8 +3,7 @@ import generateRandNum from '../helpers/random-num.js';
 
 export default () => {
   const rules = 'What is the result of the expression?';
-  const expressions = [];
-  const values = [];
+  const rounds = [[], [], []];
   const operators = ['+', '-', '*'];
   let firstNum = 0;
   let secondNum = 0;
@@ -14,16 +13,16 @@ export default () => {
     firstNum = generateRandNum(1, 100);
     secondNum = generateRandNum(1, 100);
     const operator = operators[generateRandNum(0, operators.length - 1)];
-    if (operator === '+') {
-      values.push(String(firstNum + secondNum));
-    } else if (operator === '-') {
-      values.push(String(firstNum - secondNum));
-    } else {
-      values.push(String(firstNum * secondNum));
-    }
     expression = `${firstNum} ${operator} ${secondNum}`;
-    expressions.push(String(expression));
+    rounds[i].push(String(expression));
+    if (operator === '+') {
+      rounds[i].push(String(firstNum + secondNum));
+    } else if (operator === '-') {
+      rounds[i].push(String(firstNum - secondNum));
+    } else {
+      rounds[i].push(String(firstNum * secondNum));
+    }
   }
 
-  anyGame(rules, expressions, values);
+  anyGame(rules, rounds);
 };

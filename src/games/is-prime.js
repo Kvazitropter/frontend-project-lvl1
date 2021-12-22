@@ -17,19 +17,18 @@ const findAllDivisors = (num) => {
 
 export default () => {
   const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const numbers = [];
-  const answers = [];
+  const rounds = [[], [], []];
 
   for (let i = 0; i < roundsCount; i += 1) {
-    const num = generateRandNum(1, 1000);
-    numbers.push(num);
+    const num = generateRandNum(1, 100);
+    rounds[i].push(num);
     const divCount = findAllDivisors(num).length;
     if (divCount === 2) {
-      answers.push('yes');
+      rounds[i].push('yes');
     } else {
-      answers.push('no');
+      rounds[i].push('no');
     }
   }
 
-  anyGame(rules, numbers, answers);
+  anyGame(rules, rounds);
 };
