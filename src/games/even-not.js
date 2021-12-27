@@ -3,16 +3,17 @@ import generateRandNum from '../helpers/random-num.js';
 
 export default () => {
   const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const rounds = [[], [], []];
+  const rounds = [];
 
   for (let i = 0; i < roundsCount; i += 1) {
     const num = generateRandNum(1, 1000);
-    rounds[i].push(num);
+    let answer = '';
     if (num % 2 === 0) {
-      rounds[i].push('yes');
+      answer = 'yes';
     } else {
-      rounds[i].push('no');
+      answer = 'no';
     }
+    rounds.push([num, answer]);
   }
 
   anyGame(rules, rounds);

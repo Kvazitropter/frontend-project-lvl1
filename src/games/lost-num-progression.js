@@ -3,7 +3,7 @@ import generateRandNum from '../helpers/random-num.js';
 
 const findLostNumOfProgression = () => {
   const rules = 'What number is missing in the progression?';
-  const rounds = [[], [], []];
+  const rounds = [];
   const gap = '..';
   const minCount = 5;
   const maxCount = 10;
@@ -20,10 +20,10 @@ const findLostNumOfProgression = () => {
       anyNum += anyDiff;
       progression.push(String(anyNum));
     }
-    const lostNum = generateRandNum(0, progression.length - 1);
-    rounds[i].unshift(progression[lostNum]);
-    progression[lostNum] = gap;
-    rounds[i].unshift(progression.join(' '));
+    const indexOfLostNum = generateRandNum(0, progression.length);
+    const lostNum = progression[indexOfLostNum];
+    progression[indexOfLostNum] = gap;
+    rounds.push([progression.join(' '), lostNum]);
     progression = [];
   }
 

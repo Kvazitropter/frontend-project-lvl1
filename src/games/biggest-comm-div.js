@@ -17,13 +17,14 @@ const findBiggestCommDiv = (num1, num2) => {
 
 export default () => {
   const rules = 'Find the greatest common divisor of given numbers.';
-  const rounds = [[], [], []];
+  const rounds = [];
 
   for (let i = 0; i < roundsCount; i += 1) {
     const num1 = generateRandNum(1, 100);
     const num2 = generateRandNum(1, 100);
-    rounds[i].push(`${num1} ${num2}`);
-    rounds[i].push(String(findBiggestCommDiv(num1, num2)));
+    const question = `${num1} ${num2}`;
+    const answer = String(findBiggestCommDiv(num1, num2));
+    rounds.push([question, answer]);
   }
 
   anyGame(rules, rounds);
