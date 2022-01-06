@@ -1,4 +1,4 @@
-import anyGame, { roundsCount } from '../index.js';
+import engine, { roundsCount } from '../index.js';
 import generateRandNum from '../helpers/random-num.js';
 
 export default () => {
@@ -7,23 +7,29 @@ export default () => {
   const operators = ['+', '-', '*'];
   let firstNum = 0;
   let secondNum = 0;
-  let expression = '';
+  let question = '';
 
   for (let i = 0; i < roundsCount; i += 1) {
     firstNum = generateRandNum(1, 100);
     secondNum = generateRandNum(1, 100);
     const operator = operators[generateRandNum(0, operators.length)];
-    expression = `${firstNum} ${operator} ${secondNum}`;
+    question = `${firstNum} ${operator} ${secondNum}`;
     let answer = '';
-    if (operator === '+') {
-      answer = String(firstNum + secondNum);
-    } else if (operator === '-') {
-      answer = String(firstNum - secondNum);
-    } else {
-      answer = String(firstNum * secondNum);
+    switch (operator) {
+      case '+':
+        answer = String(firstNum + secondNum);
+        break;
+      case '-':
+        answer = String(firstNum - secondNum);
+        break;
+      case '*':
+        answer = String(firstNum * secondNum);
+        break;
+      default:
+        i -= 1;
     }
-    rounds.push([expression, answer]);
+    rounds.push([question, answer]);
   }
 
-  anyGame(rules, rounds);
+  engine(rules, rounds);
 };

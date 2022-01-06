@@ -1,4 +1,4 @@
-import anyGame, { roundsCount } from '../index.js';
+import engine, { roundsCount } from '../index.js';
 import generateRandNum from '../helpers/random-num.js';
 
 const findBiggestCommDiv = (num1, num2) => {
@@ -27,5 +27,5 @@ export default () => {
     rounds.push([question, answer]);
   }
 
-  anyGame(rules, rounds);
+  engine(rules, rounds);
 };

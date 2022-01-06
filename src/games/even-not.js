@@ -1,4 +1,4 @@
-import anyGame, { roundsCount } from '../index.js';
+import engine, { roundsCount } from '../index.js';
 import generateRandNum from '../helpers/random-num.js';
 
 export default () => {
@@ -6,15 +6,15 @@ export default () => {
   const rounds = [];
 
   for (let i = 0; i < roundsCount; i += 1) {
-    const num = generateRandNum(1, 1000);
+    const question = generateRandNum(1, 1000);
     let answer = '';
-    if (num % 2 === 0) {
+    if (question % 2 === 0) {
       answer = 'yes';
     } else {
       answer = 'no';
     }
-    rounds.push([num, answer]);
+    rounds.push([question, answer]);
   }
 
-  anyGame(rules, rounds);
+  engine(rules, rounds);
 };
