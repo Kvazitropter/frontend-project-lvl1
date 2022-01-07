@@ -28,7 +28,9 @@ export default () => {
       default:
         i -= 1;
     }
-    rounds.push([question, answer]);
+    if (answer !== '') {
+      rounds.push([question, answer]);
+    }
   }
 
   engine(rules, rounds);
