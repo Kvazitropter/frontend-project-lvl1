@@ -1,6 +1,8 @@
 import engine, { roundsCount } from '../index.js';
 import generateRandNum from '../helpers/random-num.js';
 
+const rules = 'Find the greatest common divisor of given numbers.';
+
 const findBiggestCommDiv = (num1, num2) => {
   let a = num1;
   let b = num2;
@@ -16,7 +18,6 @@ const findBiggestCommDiv = (num1, num2) => {
 };
 
 export default () => {
-  const rules = 'Find the greatest common divisor of given numbers.';
   const rounds = [];
 
   for (let i = 0; i < roundsCount; i += 1) {

@@ -1,8 +1,9 @@
 import engine, { roundsCount } from '../index.js';
 import generateRandNum from '../helpers/random-num.js';
 
+const rules = 'What number is missing in the progression?';
+
 const findLostNumOfProgression = () => {
-  const rules = 'What number is missing in the progression?';
   const rounds = [];
   const gap = '..';
   let progression = [];

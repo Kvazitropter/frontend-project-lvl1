@@ -4,7 +4,7 @@ export const roundsCount = 3;
 
 const engine = (rules, rounds) => {
   console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ').trim();
+  const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(rules);
 
