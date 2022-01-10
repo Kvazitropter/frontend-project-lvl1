@@ -4,10 +4,14 @@ import generateRandNum from '../helpers/random-num.js';
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
-  for (let i = 2; i <= num / 2; i += 1) {
-    if (num % i === 0) {
-      return false;
+  if (num >= 2) {
+    for (let i = 2; i <= num / 2; i += 1) {
+      if (num % i === 0) {
+        return false;
+      }
     }
+  } else {
+    return false;
   }
 
   return true;
