@@ -11,13 +11,18 @@ const isPrime = (num) => {
   return false;
 };
 
+const generateRound = () => {
+  const question = generateRandNum(1, 1000);
+  const answer = isPrime(question) ? 'yes' : 'no';
+
+  return [question, answer];
+};
+
 export default () => {
   const rounds = [];
 
   for (let i = 0; i < roundsCount; i += 1) {
-    const question = generateRandNum(1, 1000);
-    const answer = isPrime(question) ? 'yes' : 'no';
-    rounds.push([question, answer]);
+    rounds.push(generateRound());
   }
 
   engine(rules, rounds);
