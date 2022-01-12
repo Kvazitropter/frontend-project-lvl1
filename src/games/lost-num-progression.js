@@ -16,10 +16,11 @@ const generateRound = () => {
   }
 
   const indexOfLostNum = generateRandNum(0, progression.length);
-  const lostNum = progression[indexOfLostNum];
+  const answer = progression[indexOfLostNum];
   progression[indexOfLostNum] = gap;
+  const question = progression.join(' ');
 
-  return [progression.join(' '), lostNum];
+  return [question, answer];
 };
 
 export default () => {
