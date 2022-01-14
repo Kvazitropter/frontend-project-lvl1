@@ -17,11 +17,10 @@ const engine = (rules, rounds) => {
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`);
       console.log(`Let's try again, ${name}!`);
-      break;
-    }
-    if (i === 2) {
-      console.log(`Congratulations, ${name}!`);
+      return;
     }
   }
+
+  console.log(`Congratulations, ${name}!`);
 };
 export default engine;
