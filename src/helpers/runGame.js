@@ -6,7 +6,6 @@ export default (rules, rounds) => {
   console.log(`Hello, ${name}!`);
   console.log(rules);
   let userAnswer;
-  console.log(rounds);
 
   return rounds.every(([question, answer]) => {
     console.log(`Question: ${question}`);
