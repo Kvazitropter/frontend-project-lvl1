@@ -11,8 +11,8 @@ runGame(
   generateRounds(
     () => {
       const operators = ['+', '-', '*'];
-      const operand1 = getRandomNumber();
-      const operand2 = getRandomNumber();
+      const operand1 = getRandomNumber(-50, 50);
+      const operand2 = getRandomNumber(-50, 50);
       const operator = operators.at(getRandomNumber(0, 2));
       const result = calculate(operand1, operand2, operator).toString();
       return [`${operand1} ${operator} ${operand2}`, result];
