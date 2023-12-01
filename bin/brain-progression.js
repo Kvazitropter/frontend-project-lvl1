@@ -14,9 +14,8 @@ runGame(
       const pMaxLength = 10;
       const pLength = getRandomNumber(pMinLength, pMaxLength);
       const symbol = '..';
-      const [progrArr, missing] = getArProgrAndMember(pLength, symbol);
-
-      return [progrArr.join(' '), missing.toString()];
+      const [progrArr, missingNum] = getArProgrAndMember(pLength, symbol);
+      return [progrArr.join(' '), missingNum.toString()];
     },
   ),
 );

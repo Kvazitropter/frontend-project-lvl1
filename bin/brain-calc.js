@@ -11,11 +11,12 @@ runGame(
   generateRounds(
     () => {
       const operators = ['+', '-', '*'];
-      const operand1 = getRandomNumber(-50, 50);
-      const operand2 = getRandomNumber(-50, 50);
+      const [min, max] = [-50, 50];
+      const operand1 = getRandomNumber(min, max);
+      const operand2 = getRandomNumber(min, max);
       const operator = operators.at(getRandomNumber(0, 2));
-      const result = calculate(operand1, operand2, operator).toString();
-      return [`${operand1} ${operator} ${operand2}`, result];
+      const expResult = calculate(operand1, operand2, operator);
+      return [`${operand1} ${operator} ${operand2}`, expResult.toString()];
     },
   ),
 );

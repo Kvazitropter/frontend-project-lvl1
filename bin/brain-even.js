@@ -10,7 +10,8 @@ runGame(
   rules,
   generateRounds(
     () => {
-      const num = getRandomNumber(0, 1000);
+      const [min, max] = [0, 10000];
+      const num = getRandomNumber(min, max);
       const parity = isEven(num) ? 'yes' : 'no';
       return [num, parity];
     },

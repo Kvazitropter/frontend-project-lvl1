@@ -10,10 +10,11 @@ runGame(
   rules,
   generateRounds(
     () => {
-      const num1 = getRandomNumber();
-      const num2 = getRandomNumber();
-      const gcd = getGCD(num1, num2).toString();
-      return [`${num1} ${num2}`, gcd];
+      const minNum = 1;
+      const num1 = getRandomNumber(minNum);
+      const num2 = getRandomNumber(minNum);
+      const gcd = getGCD(num1, num2);
+      return [`${num1} ${num2}`, gcd.toString()];
     },
   ),
 );

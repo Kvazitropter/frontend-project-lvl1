@@ -12,7 +12,7 @@ runGame(
     () => {
       const number = getRandomNumber();
       const answer = isPrime(number) ? 'yes' : 'no';
-      return [number.toString(), answer];
+      return [number, answer];
     },
   ),
 );
